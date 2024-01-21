@@ -1,0 +1,170 @@
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/pr2.png">
+    <title>JJJCUT</title>
+<style>
+@media screen and (min-width: 480px) {
+body {
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  background: linear-gradient(
+    to bottom,
+    #ff016a,
+    #6c0cac
+  );
+	font-family: Arial;
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+form {
+	border-radius: 10px;
+	border: 5px solid black;
+	background: linear-gradient(
+	to top,
+	#c6f100,
+	#43ffff
+);
+	filter:drop-shadow(6px 8px 12px black);
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: Lucida Console;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: Arial;
+  width: 100%;
+  padding: 10px;
+    border: 3px solid black;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: transparent;
+}
+
+button {
+  height: 50px;
+  background: linear-gradient(
+    to left,
+     orange,
+    salmon
+  );
+  border: none;
+  color: black;
+  font-size: 1.25em;
+  font-family: Arial;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 5vh;
+
+
+}
+
+button:hover {
+  border: 2px solid black;
+}
+form {
+	padding: 0 40px;
+	
+  color: black;
+}
+input[type="text"] {
+
+background-color: ghostwhite;
+color: maroon;
+}
+
+</style>
+<body>
+  <div class="box"> </div>
+
+<center><h2>RESERVATION FORM</h2></center>
+<div class="point">
+<form method="post" action="rr.html">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="" required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="" id="email" name="visitor_email" placeholder="" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="" id="phone" name="visitor_phone" placeholder=""  required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkin-date">Reservation Date</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+<div class="elem-group inlined" style="margin-bottom: -2px">
+  <label for="appt">Choose a time: </label>
+<input type="time" id="appt" name="appt"
+       min="09:00" max="21:00" required>
+
+<small>Barber hours are 9am to 9pm</small>
+<hr style="text-decoration: none;">
+ </div>
+  <div class="elem-group">
+    <label for="message">Comments</label>
+    <textarea id="message" name="visitor_message" placeholder="Your comment"></textarea>
+  </div>
+<br>
+  <center><button style="text-decoration: none; letter-spacing: 2px;" href="rr.html">Reserve Now!</button></center>
+<br>
+<br>
+</form>
+<a type="button" href="home.html"><img src="img/arrow1.png" style="display: flex; transform: rotate(180deg); width: 200px; height: auto;"><///a>
+</div>
+</body>
+<script>
+var currentDateTime = new Date();
+var year = currentDateTime.getFullYear();
+var month = (currentDateTime.getMonth() + 1);
+var date = (currentDateTime.getDate() + 1);
+
+if(date < 10) {
+  date = '0' + date;
+}
+if(month < 10) {
+  month = '0' + month;
+}
+
+var dateTomorrow = year + "-" + month + "-" + date;
+var checkinElem = document.querySelector("#checkin-date");
+var checkoutElem = document.querySelector("#checkout-date");
+
+checkinElem.setAttribute("min", dateTomorrow);
+
+checkinElem.onchange = function () {
+    checkoutElem.setAttribute("min", this.value);
+}
+</script>

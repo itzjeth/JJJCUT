@@ -1,0 +1,737 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    height: auto;
+    box-sizing: border-box;
+}
+body{
+   cursor: url("/img/mustache.png" auto);
+    background-color: #851E3E;
+
+}
+a.rickroll{
+text-decoration: none;
+
+}
+a.rickroll:hover{
+ color: #EB1616;
+}
+h3 {
+padding: 0, 50;
+}
+
+.navbar-dark .navbar-brand{
+    color: #EB1616;
+    font-size: 33px;
+    font-weight: bold;
+    margin-top: -7px;
+}
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #031D44;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+
+.navbar-dark .navbar-brand:hover {
+    background-image: linear-gradient(45deg, #00008B, white);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.nav-link .active , .nav-link .active:hover{
+    color: #C81313;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar{
+    padding:1.5%;
+   background: linear-gradient(
+	to right,
+	#f4c430,
+	#ea3b52
+);
+    
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    border-radius: 10%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight:bold ;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  background: linear-gradient(
+	to top,
+	yellow,
+	lime
+	);
+}
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.nav-link:hover::before {
+transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-dark .navbar-toggler-icon{
+    color: lime;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+    color: black;
+}
+.cssbuttons-io-button {
+    background-color: white;
+    color: black;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    letter-spacing: 0.05em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: inset 0 0 1.6em -0.6em #EB1616;
+    box-shadow: inset 0 0 1.6em -0.6em #EB1616;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    width: 180px;
+    margin-left: 5%;
+	text-decoration: none;
+}
+
+.cssbuttons-io-button .icon {
+    background-color: white;
+    color: lime;
+    margin-left: 1em;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    -webkit-box-shadow: 0.1em 0.1em 0.6em 0.2em #EB1616;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #EB1616;
+    right: 0.3em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+} 
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+	background-color: lime;
+} 
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    color: black;
+}
+   
+.cssbuttons-io-button:hover .icon svg {
+    -webkit-transform: translateX(0.1em);
+    -ms-transform: translateX(0.1em);
+    transform: translateX(0.1em);
+} 
+.cssbuttons-io-button:active .icon {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.hiro-section{
+    background-image: url(../img/img-back.jpg);
+    background-position: top center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    min-height: 800px;
+}
+.opacity{
+    background: linear-gradient(
+	to right,
+	#061E3E,
+	#451E3E
+	);
+    min-height: 800px;
+    opacity: 0.9;
+}
+.title-header{
+    margin-left: 15%;
+    font-size: 4.8rem;
+    padding-top: 13%;
+    color: white;
+    font-weight: bold;
+    font-family: "Oswald",sans-serif;
+}
+.kenburns-top:hover {
+	-webkit-animation: kenburns-top 2s ease-out  both;
+	        animation: kenburns-top 2s ease-out  both;
+}
+
+ @-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1) translateY(-15px);
+              transform: scale(1) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    20% {
+      -webkit-transform: scale(1) translateY(-15px);
+              transform: scale(1) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  
+.title2{
+    margin-left: 15%;
+    margin-top: -3%;
+    font-size: 4.8rem;
+    color: white;
+    font-weight: bold;
+    font-family: "Oswald",sans-serif;
+}
+.icon-head{
+    color: #EB1616;
+}
+.information{
+    margin-left: 15%;
+    color: white;
+    font-family: "Oswald",sans-serif;
+    font-size: 1rem;
+}
+
+.sec1	{
+    margin-top: 7%;
+	background-image: url(../img/hs.jpg);
+
+    
+}
+.about{
+    color: black;
+	background-color: lime;
+    margin-left: -4%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.year{
+    color: transparent;
+	background-color: transparent;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.exper{
+    color: transparent;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.box{
+    background-color: transparent;
+    border: transparent;
+}
+.title-sec1{
+    font-size: 2rem;
+    color: white;
+    font-family: "Oswald",sans-serif;
+    font-weight: bold;
+}
+.p1{
+    font-size: 15px;
+    color:white;
+}
+.since{
+    color: transparent;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.sec2 , .sec5{
+    margin-top: 7%
+}
+.title-sec2{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.p-sec2{
+    font-size: 2.9rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Oswald",sans-serif;
+}
+.service-item{
+       background-color: #191C24;
+    color: white;
+}
+.service-object{
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald",sans-serif;
+    font-weight: bold;
+	 transition: all .2s ease-in-out; 
+}
+.service-item:hover{
+    cursor: pointer;
+    color: white;
+}
+
+img.img-price{
+ transition: all .2s ease-in-out; 
+}
+
+img.img-price:hover{
+}
+
+.fa-plus{
+    color: #EB1616;
+}
+.from{
+    color: #EB1616;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: bold;    
+}
+.div-service{
+    margin-top: 2%;
+}
+
+.sec3{
+    margin-top: 7%;
+}
+.title-sec3{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.p-sec3{
+    font-size: 2.9rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Oswald",sans-serif;
+}
+.list{
+    color: white;
+    font-family: "Oswald",sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+.div-price{
+    background-color: #191C24;
+    padding: 3%;
+}
+.price{
+    color: #EB1616;
+    
+}
+.img-price{
+	width: 100%;
+	height: auto;
+      
+}
+.img-price:hover{
+}
+.text-focus-in {
+	-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+.sec4{
+    margin-top: 7%;
+}
+.title-sec4{
+    color: #EB1616;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.barber{
+    margin-top: 3%;
+    background-color: #191C24;
+    cursor: pointer;
+}
+.bar-des{
+    padding: 3%;
+}
+.bar{
+    color: white;
+    font-family: Lucida Console;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.des{
+    color: #EB1616;
+    margin-top: -5%;
+    font-family: Lucida Console;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.hour{
+    color:#6C7293;
+}
+.foot{
+    background-color:  #061E3E;
+    padding: 2%;
+    margin-top: 7%;
+}
+.title{
+    color: yellow;
+	margin-right: 20vh;
+    font-family: "Oswald",sans-serif;
+    font-weight: bold;
+	
+}
+.title:hover{
+	color: yellow;
+	border: 2px solid yellow;
+}
+.social{
+    color: yellow;
+}
+.hn{
+    color: white;
+}
+.hn:hover {
+	color: black;
+	background-color: lime;
+}
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+.ul{
+    list-style:none;
+}
+.ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: -10%;
+    margin-top: -2%;
+}
+.foot .ul li a:hover{
+	background-color: lime;
+    color: black;
+}
+.signup:hover{
+    background-color: yellow;
+    color: black;
+}
+.signup{
+    background-color: black;
+    color: white;
+}
+.icon{
+    color: yellow;
+}
+.desi{
+    color: white;
+}
+.link{
+    color: red;
+    text-decoration: none;
+	font-weight: bold;
+}
+.link:hover{
+    color: lime;
+	background-color: black;
+    text-decoration: none;
+}
+
+.testmoniaml{
+    margin-top: 10% ;
+    padding: 10%;
+    color: lime;
+}
+img.img-fluid{ 
+transition: all .2s ease-in-out; 
+border-radius: 50% 10%;
+border: 5px solid lime;
+transition: ease-in-out 7s transform;
+}
+img.img-fluid1{ 
+transition: all .2s ease-in-out; 
+border-radius: 50% 10%;
+}
+img.img-fluid2{ 
+transition: all .2s ease-in-out; 
+}
+
+img.img-fluid:hover{ 
+transform: scale(1.1);
+transform: rotate(3900deg);
+}
+img.img-fluid2:hover{ 
+transform: scale(1.1); 
+}
+.single-box{
+    height: 300px;
+     background: linear-gradient(
+	to top,
+	yellow,
+	orange
+);
+    color: black;
+    border-radius: 30px;
+    padding: 5%;
+    cursor: pointer;
+    margin: 5px;
+}
+.single-box:hover{
+    transform: scale(0.9);
+}
+.single-box img{
+    border-radius: 50%;
+}
+.img1 img{
+    border: 2px solid white;
+    margin-top: 10%;
+} 
+.img-text h4{
+    margin-top: 3%;
+    font-size: medium;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family:sans-serif;
+}
+.img-text p{
+    color: #6C7293;
+    font-size: 13px;
+}
+.//////////////////////////////dv{
+    
+}
+./////////////////////////////////dv:hover{
+    background-color: #303238;
+}
+h1.text-uppercase1 {
+	font-family: Lucida Console;
+	color: lime;
+	background-color: black;
+}
+span.multitext1, 
+span.multitext2,
+span.multitext3  {
+	font-family: Lucida Console;
+	color: black;
+	background-color: lime;
+}
+.gallery {
+	display: flex;
+	left(calc 50% - 330px);
+	justify-content: center;
+}
+
+.card{
+	position: relative;
+	left: 0px;
+	color: transparent;
+	font-family: Lucida Console;
+	margin-top: 2vh;
+	width: 350px;
+	height: 510px;
+	padding: 8px;
+	border-radius: 10%;
+	transition: .8s ease-in-out;
+	text-decoration: none;
+	
+	
+}
+.gallery:hover {
+}
+.card:nth-child(1) {
+	background: lime;
+}
+.card:nth-child(2) {
+	background: black;
+}
+.card:nth-child(3) {
+	background: lime;
+}
+.card:nth-child(4) {
+	background: black;
+}
+.card:nth-child(1):hover {
+	background-image: url("../cssvio/por5.png");
+	
+}
+.card:nth-child(2):hover {
+	background-image: url("../cssvio/vio.png");
+	
+}
+.card:nth-child(3):hover {
+	background-image: url("../cssvio/tea2.png");
+	background-color: none;
+	
+}
+.card:nth-child(4):hover {
+	background-image: url("../cssvio/cola1.png");
+}
+.card:not(:first-child){
+	 margin-left: -55px;
+
+}
+.card:hover {
+	color: lime;
+	transition: .1s ease-in-out;
+ 	transform: translateY(-16px);
+ 	font-weight: bold;
+	cursor: pointer;
+}
+.p-sec10 {
+	margin-top: 40vh;
+	margin-left: 86vh;
+	margin-right: 86vh;
+	font-family: Lucida Console;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 8px;
+	padding: 10px 15px;
+	background: linear-gradient(
+		to top,
+		white,
+		black
+		
+);
+	
+}
+.p-sec10:hover {
+	background: linear-gradient(
+		to right,
+		black,
+		white
+);
+	color: white;
+}
+a.un {
+	text-decoration: none;
+}
+.card:nth-child(5) {
+	background: linear-gradient(
+	to top,
+	lime,
+	pink
+);
+}
+.card:nth-child(6) {
+	background: linear-gradient(
+	to top,
+	orange,
+	red
+);
+}
+.card:nth-child(7) {
+	background: linear-gradient(
+	to top,
+	purple,
+	pink
+);
+}
+.card:nth-child(8) {
+	background: linear-gradient(
+	to top,
+	#ed6a5e,
+	orange
+);
+}
+
+
+
